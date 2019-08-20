@@ -1,0 +1,41 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+        {% include './partial/hero-single.twig' %}
+        <section class="section" id="extra-services">
+                <div class="container">
+                        <div class="row flex-md-row-reverse flex-start">
+                                <div class="col-md-7">
+                                        <div class="text-area"
+                                             data-aos="fade-right"
+                                             data-aos-anchor-placement="center" 
+                                             data-aos-duration="1000">
+                                        {{post.deliverybox}}
+                                        </p>
+                                        </div>
+                                </div>
+                                <div class="col-md-5">
+                                        <div class="image-area">
+                                        <img class="lazyload" 
+                                             data-aos="fade-in"
+                                             data-aos-anchor-placement="center" 
+                                             data-aos-duration="1000" 
+                                             data-aos-delay="600" 
+                                             class="lazyload" 
+                                             data-src="{{Image(post.extra_one_image).src}}" 
+                                             alt="image">
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        </section>
+                <section class="jumbo-services section">
+                        <div class="jumbo-services-inner">
+                        <h2> Location not listed? A question about {{post.title}}? </h2>
+                        <a href="#" class="btn btn-primary"> Give us a call </a>
+                        </div>
+
+                </section>
+{% endblock %}

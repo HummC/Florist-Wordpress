@@ -1,0 +1,27 @@
+
+        
+        <div class="col-md-6">
+            <picture class="thumbnail-image col-md-6">
+            <a href="{{post.link}}" title="Read {{post.title}}">
+            {% if post.get_thumbnail %}
+			    <img data-src="{{post.thumbnail.src}}" class="lazyload"/>
+		    {% endif %}
+            </a>
+        </picture>
+        </div>
+        <div class="col-md-6">
+            <div class="featured-item-text">
+        <a href="{{post.link}}" title="Read {{post.title}}">
+            <h3 class="featured-item-title">{{post.title}}</h3>
+        </a>
+        <a class="category-link" href="{{post.category.link}}">{{ post.category}}</a>
+        <p> 
+        {% if post.post_excerpt %}
+            {{ post.preview }}
+        {% endif %} 
+        </p>
+        <a href="{{post.link}}"class="btn btn-primary mt-2" data-aos="zoom-in"
+                 data-aos-anchor-placement="center" 
+                 data-aos-duration="10000">Read more </a>
+    </div>
+        </div>

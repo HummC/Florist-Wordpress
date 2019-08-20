@@ -1,0 +1,34 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+                <!-- Hero Banner -->
+                 {% include './partial/hero-single.twig' %}
+		 <section class="section">
+                <div class="container">
+                        <div class="row">
+                                <div class="col-12 justify-content-center">
+                                        <div class="text-area">
+                                        <h2 class="section-heading text-center"> {{post.sectionheading ? post.sectionheading : 'Section Title'}}</h2>
+                                        <p class="section-content text-center">
+                                        {{post.sectiontext ? post.sectiontext : "Lorem Ipsum"}}
+                                        </p>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </section>
+                <!-- Quote Ribbon Section -->
+		{% include './partial/quote-ribbon.twig' %}
+
+                <!-- Featured Services Section -->
+		 {% include './partial/section-double.twig' %}
+
+                <!-- Showcase Section -->
+		 {% include './partial/showcase.twig' %}
+                
+                <!-- Jumbotron Section -->
+                {% include './partial/jumbotron.twig' %}
+		
+	</article>
+{% endblock %}

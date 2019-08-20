@@ -1,0 +1,9 @@
+   <div class="col-12 py-3 col-md-3 occassion-item" data-aos="flip-down"
+     data-aos-anchor-placement="bottom"  data-aos-duration="700" data-aos-delay="{{loop.index}}50">
+        <div class="occassion-item-inner d-flex justify-content-center align-items-center">
+            {% if occassion.thumbnail.src %}
+			    <img src="{{occassion.thumbnail.src|resize(75)}}" />
+		    {% endif %}
+                 <h4> {{occassion.title}} </h4>
+        </div>
+    </div>

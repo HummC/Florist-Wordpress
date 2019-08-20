@@ -1,0 +1,42 @@
+{% block html_head_container %}
+
+{% include 'html-header.twig' %}
+	{% block head %}
+	{% endblock %}
+	</head>
+{% endblock %}
+
+	<body class="{{body_class}}" data-template="base.twig">
+		<a class="skip-link screen-reader-text" href="#content">{{ _e( 'Skip to content') }}</a>
+		<!-- Header -->
+			{% block header %}
+					{% include './header.twig' with { class: '-site', role: 'banner' } %}
+			{% endblock %}
+
+		<!-- Content -->
+		<main id="content-wrapper" role="main">
+			{% if title %}<h1>{{title}}</h1>{% endif %}
+				{% block content %}
+					Sorry, no content
+				{% endblock %}
+			{% if sidebar %}
+				<aside class="layout-sidebar">
+					{{sidebar}}
+				</aside>
+			{% endif %}
+			{% include './footer-svg.twig' %}
+		</main>
+		{% block footerTop %}
+
+		{% endblock %}
+		<!-- Footer -->
+		{% block footer %}
+			<footer id="footer">
+				<div class="container">
+				{% include './footer.twig' with { class: '-site', role: 'contentinfo' } %}
+				</div>
+			</footer>
+			{{ function('wp_footer') }}
+		{% endblock %}
+	</body>
+</html>

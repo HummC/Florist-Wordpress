@@ -1,0 +1,36 @@
+
+
+
+.section-heading {
+    margin-bottom:1rem;
+    text-align:center;
+}
+
+.section-content {
+    text-align:justify;
+}
+.heading--accent {
+    padding-top:30px;
+}
+
+// Double Section Styles
+
+#extra-services {
+    padding:125px 0;
+}
+
+@media screen and (min-width:700px) {
+    .section-heading {
+        margin-bottom:1rem;
+        text-align:left;
+    }
+    
+    .section-content {
+        text-align:left;
+    }  
+
+    .section-accent {
+     margin: 0;   
+    }
+    
+}

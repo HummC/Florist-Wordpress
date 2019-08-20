@@ -1,0 +1,53 @@
+<section class="section" id="extra-services">
+                <div class="container">
+                        <div class="row flex-md-row-reverse">
+                                <div class="col-md-7">
+                                        <div class="text-area" 
+                                             data-aos="fade-right"
+                                             data-aos-anchor-placement="center" 
+                                             data-aos-duration="1000">
+                                        <h2 class="section-heading"> {{post.extra_one_title}}</h2>
+                                        <p class="section-content">
+                                        {{post.extra_one_text}}
+                                        </p>
+                                        </div>
+                                </div>
+                                <div class="col-md-5">
+                                        <div class="image-area">
+                                        <img data-aos="fade-in"
+                                             data-aos-anchor-placement="center" 
+                                             data-aos-duration="1000" 
+                                             data-aos-delay="600" 
+                                             class="lazyload" 
+                                             data-src="{{Image(post.extra_one_image).src}}" 
+                                             alt="image">
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="row">
+
+                                  <div class="col-md-7 order-md-1">
+                                        <div class="text-area mx-auto" 
+                                             data-aos="fade-left"
+                                             data-aos-anchor-placement="center" 
+                                             data-aos-duration="1000">
+                                        <h2 class="section-heading"> {{post.extra_two_title}}</h2>
+                                        <p class="section-content">
+                                        {{post.extra_two_text}}
+                                        </p>
+                                        </div>
+                                </div>
+                                <div class="col-md-5 order-md-2">
+                                        <div class="image-area image-area--reverse">
+                                        <img data-aos="fade-in"
+                                             data-aos-anchor-placement="center" 
+                                             data-aos-duration="1000" 
+                                             data-aos-delay="600" 
+                                             class="lazyload" 
+                                             data-src="{{Image(post.extra_two_image).src}}" 
+                                             alt="image">
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </section>

@@ -1,0 +1,5 @@
+ <section class="quote-ribbon" style="background-image:url('{{post.ribbonimage ? Image(post.ribbonimage).src | resize(1920, 1080) : post.thumbnail.src | resize(1920, 1080)}}')">
+			<div class="container d-flex justify-content-center">
+				<h2> "{{post.ribboncontent ? post.ribboncontent : "Enter your quote here" }}" </h2>
+			</div>
+		</section>

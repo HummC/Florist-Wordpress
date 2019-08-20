@@ -1,0 +1,106 @@
+@import './vendor/reset';
+@import './partials/all';
+@import './layout/all';
+@import './vendor/bootstrap-grid.min';
+@import './blocks/all';
+@import './pages/all';
+
+html, body {
+    font-size:100%;
+    background-image:url('../../img/emboss.png');
+}
+
+.header {
+    background-color:#111111;
+}
+
+.flex-center {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.site-logo {
+    text-align:center;
+    a {
+        color:white;
+        text-decoration:none;
+        &:visited {
+            color:white;
+        }
+    }
+}
+
+.icon {
+    display:inline-block;
+    width:20px;
+    height:20px;
+    background-size:cover;
+    position:relative;
+}
+
+.icon-wedding {
+    background-image:url('');
+}
+
+.icon-funeral {
+    background-image:url('');
+}
+
+.icon-events {
+    background-image:url('');
+}
+
+.home {
+    main {
+        padding-bottom:150px;
+    }
+}
+
+.blog {
+    main {
+        padding-bottom:250px;
+    }
+}
+
+main {
+    position:relative;
+    min-height:100vh;
+}
+
+#iow {
+    position:absolute;
+    bottom:0;
+}
+
+.st0 {
+    background-color: #111;
+}
+
+.row {
+    flex-direction:row;
+}
+
+
+// Overwrite bootstrap classes
+
+.container {
+    padding-left:50px;
+    padding-right:50px;
+    width:100%;
+}
+
+
+
+.active-hover {
+    filter:grayscale(0);
+    opacity:1;
+}
+
+@media screen and (min-width:700px) {
+    .container {
+        padding-left:0;
+        padding-right:0;
+        width:100% !important;
+    }
+}

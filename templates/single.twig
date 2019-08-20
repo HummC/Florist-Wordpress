@@ -1,0 +1,27 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+         {% include './partial/hero.twig' %}
+        <section class="article-content">
+        <div class="post-meta-bar">
+        <ul>
+          <li> Date posted: <span class="post-list-value">{{post.Date}}</span></li>
+          <li> Author: <span class="post-list-value"><a href="{{post.author.link}}">{{ post.author}}</a></li>
+          <li> Category: <span class="post-list-value"><a href="{{post.category.link}}">{{ post.category}}</a></span></li>
+        </ul>
+        </div>
+        <div class="container">
+		 {{ post.content }}
+        </div>
+        </section>
+                <section class="jumbo-services section">
+                        <div class="jumbo-services-inner">
+                        <img src="{{theme.link}}/img/search.png">
+                        <h2> Can't find what you're looking for? </h2>
+                        <a href="#" class="btn btn-primary"> Give us a call </a>
+                        </div>
+
+                </section>
+	</article>
+{% endblock %}

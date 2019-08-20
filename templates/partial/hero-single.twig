@@ -1,0 +1,24 @@
+<section class="hero-section hero-single" id="hero" 
+                 style="background-image:url('{{post.theheroimage ? Image(post.theheroimage).src | resize(1920, 1080) : post.thumbnail.src | resize(1920, 1080)}}')">
+                        <div class="container">
+                                <div class="row">
+                                <div class="col-12 hero-content">
+                                    <h1 data-aos="zoom-in"
+                                        data-aos-anchor-placement="top" 
+                                        data-aos-duration="700" 
+                                        class="hero-title"> {{post.herotitle ? post.herotitle : post.title}} 
+                                    </h1>
+                               {% if post.herosubtext %}
+                                 <p class="hero-subtext"
+                                   data-aos="fade-in"
+                                   data-aos-anchor-placement="top" 
+                                   data-aos-duration="700"
+                                   data-aos-delay="500"
+                                   > 
+                                    {{post.herosubtext}}
+                                </p> 
+                               {% endif %}
+                                </div>
+                           </div>
+                        </div>
+        </section>

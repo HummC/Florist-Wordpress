@@ -1,0 +1,19 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+         {% include './partial/hero-single.twig' %}
+        <section class="article-content">
+        <div class="container">
+	{{ post.content }}
+        </div>
+        </section>
+                <section class="jumbo-services section">
+                        <div class="jumbo-services-inner">
+                        <h2> Have a question about {{post.title}}? </h2>
+                        <a href="#" class="btn btn-primary"> Give us a call </a>
+                        </div>
+
+                </section>
+	</article>
+{% endblock %}

@@ -1,0 +1,147 @@
+.occassion-item-inner {
+    width: 100%;
+    position:relative;
+    height:250px;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    align-items:center;
+    transition:0.8s ease-in-out;
+    img {
+        filter:invert(1);
+        margin-bottom:1rem;
+    }
+    h4 {
+        color:white;
+        font-family:$heading-family;
+    }
+}
+
+.not-listed {
+    background:purple;
+    h4 {
+        color:white;
+    }
+}
+
+
+.item-front, .item-back {
+    position:absolute;
+    box-sizing:border-box;
+    padding:1rem;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    backface-visibility:hidden;
+    transition:0.8s;
+}
+
+.item-front {
+    transform:rotateX(0deg);
+    background:purple;
+
+}
+
+.item-back {
+    transform:rotateX(180deg);
+    background:white;
+}
+
+.occassion-item-inner:hover {
+    .item-front {
+        transform:rotateX(180deg);
+        opacity:0;
+    }
+    .item-back {
+        transform:rotateX(0deg);
+        opacity:1;
+    }
+
+    .telephone-number {
+        transform:scale(1);
+        transition: 0.5s ease-in;
+        transition-delay:0.5s;
+    }
+}
+
+
+.front-content, .back-content {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100%;
+
+}
+
+.back-content-inner {
+    color:purple;
+}
+
+.telephone-number {
+    margin-top:1rem;
+    position:relative;
+    cursor:pointer;
+    transform:scale(0);
+    width:100%;
+    padding:1rem 2rem;
+    background:purple;
+    color:white;
+    transform-origin:center;
+}
+
+
+#telephone {
+    background:none;
+    outline:0;
+    border:0;
+    color:white;
+    text-align:center;
+    cursor:pointer;
+    width:100%;
+}
+
+.back-content-inner {
+    width:200px;
+}
+
+.telephone-tooltip {
+    padding:5px 10px;
+    background: rgb(17, 17, 17);
+    color:white;
+    position:absolute;
+    border-radius:5px;
+    bottom:-30px;
+    opacity:0;
+    animation-duration: 2s;
+}
+
+
+#testimonials {
+    background:#efefef;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 400px;
+}
+
+.swiper-slide {
+    justify-content:center;
+    align-items:center;
+    display:flex;
+}
+
+.flex-start {
+align-items:flex-start !important;
+}
+
+.swiper-button-next, .swiper-button-previous {
+    color: purple;
+}
+
+.swiper-slide-active {
+    .review-item {
+        animation: hello 0.25s linear 1s forwards;
+    }
+}

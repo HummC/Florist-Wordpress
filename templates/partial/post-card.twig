@@ -1,0 +1,16 @@
+<div class="grid-item  col-md-4 active-link" data-aos="fade-in"
+     data-aos-anchor-placement="center" data-aos-duration="700" data-aos-delay="{{loop.index}}50">
+    <div class="post-item">
+        <picture class="thumbnail-image">
+            <a href="{{post.link}}" title="Read {{post.title}}">
+            {% if post.get_thumbnail %}
+			    <img data-src="{{post.thumbnail.src}}" class="lazyload"/>
+		    {% endif %}
+            </a>
+        </picture>
+        <a href="{{post.link}}" title="Read {{post.title}}">
+            <h3 class="post-item-title">{{post.title}}</h3>
+        </a>
+        <a href="{{post.category.link}}">{{ post.category}}</a>
+    </div>
+</div>  

@@ -1,0 +1,36 @@
+ {% 
+    set customClassList = [
+        'footer-menu',
+        'dark'
+        ]
+ %}
+    <div class="row">
+        <div class="col-md-3">
+            <h3> Address </h3>
+            <ul>
+                <li> Road and house number </li>
+                <li> City name </li>
+                <li> County name </li>
+                <li> SO41 000 </li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+        <h3> Sitemap </h3>
+        {% include "menu-footer.twig" with {'menu': footer_three.get_items, 'custom-classlist': customClassList} %}
+        </div>
+        <div class="col-md-3">
+            <h3> Contact Info </h3>
+            <ul>
+                <li> Phone: 01590 644000</li>
+                <li> Email: info@theseasons.co.uk </li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h3> Opening Hours </h3>
+            <ul>
+                <li> Mon - Fri: 9:00 - 17:00 </li>
+                <li> Sat - Sun: 9:00 - 13:00 </li>
+                <li> Current status: Open </li>
+            </ul>
+        </div>
+    </div>

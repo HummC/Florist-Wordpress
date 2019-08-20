@@ -1,0 +1,31 @@
+<section class="showcase">
+			<header class="showcase-header">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="showcase-header-content">
+						<h2 class="text-center"> Showcase </h2>
+						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum volutpat porta.
+						Quisque rutrum pharetra urna, ut sagittis est elementum nec. </p>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="showcase-grid">
+						 {% for image in post.get_field('gallery') %}
+						 	<figure class="gallery-item" 
+							 		data-src="{{ TimberImage(image).src }}"
+									data-aos="fade-in"
+									data-aos-anchor-placement="center" 
+									data-aos-duration="700" data-aos-delay="{{loop.index}}50">
+								 <a class="gallery-item-img-link" href="{{TimberImage(image).src}}" title="{{image.title}}" data-fancybox="{{post.title}}">
+								 <img data-src="{{ TimberImage(image).src }}" 
+								 	  class="gallery-item-img lazyload"
+									  alt="">
+								 </a>
+							</figure>
+						 {% endfor %}
+			</div>
+                        <div class="center-row">
+                                 <a href="javascript:void(0)" id="theButton" data-parent="{{post.ID}}" class="btn btn-primary"> Load More </a>
+                        </div>
+		</section>

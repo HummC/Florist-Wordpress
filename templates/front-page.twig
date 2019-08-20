@@ -1,0 +1,103 @@
+{% extends "base.twig" %}
+{% set defaultimage = "#{theme.link}/img/default.png" %}
+
+
+{% block content %}
+	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+        <!-- Hero Banner -->
+        {% include './partial/hero.twig' %}
+
+        <!-- About Section -->
+         {% include './partial/section-single.twig' %}
+
+        <!-- Services Section -->
+        <section class="services-section" id="services">
+                <div class="container">
+                        <div class="row">
+                                {% for service in services %}
+                                        {% include './tease-service.twig' %}
+                                {% endfor %} 
+                        </div>
+                </div>
+        </section>
+
+        <!-- Featured Services Sections -->
+        {% include './partial/section-double.twig' %}
+
+        <!-- Occassions List Section -->
+        <section  id="occassions">
+                <div class="container">
+                        <div class="row">
+                                <div class="occassions-text">
+                                        <h2> Flowers for any occassion </h2>
+                                </div>
+                        </div>
+                        <div class="row">
+                                {% for occassion in occassions %}
+                                     {% include './tease-occassion.twig' %}
+                                {% endfor %} 
+                                 <div class="col-12 py-3 col-md-3 occassion-item" data-aos="zoom-in"
+     data-aos-anchor-placement="top" data-aos-duration="700" data-aos-delay="700">
+                                                <div class="occassion-item-inner not-listed d-flex justify-content-center align-items-center">
+			                                <div class="item-front">
+                                                                <div class="front-content">
+                                                        <img src="{{occassion.thumbnail.src|resize(75)}}" />
+                                                        <h4> Something different?</h4>
+                                                                </div>
+                                                        </div>
+                                                        <div class="item-back">
+                                                                <div class="back-content">
+                                                                        <div class="back-content-inner">
+                                                                        <p> Call us on </p>
+                                                                        <div class="telephone-number" title="Copy">
+                                                                                <span class="telephone-tooltip"> Copied to clipboard! </span>
+                                                                                <input type="text" id="telephone" value="01590 644000"></input>
+                                                                        </div>
+                                                                        
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                        </div>
+        </section>
+        <!-- Testimonial slider -->
+        <section class="section" id="testimonials">
+                <div class="container">
+                        <div class="row">
+
+                        <!-- Slider main container -->
+<div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+         {% for testimonial in testimonials %}
+              {% include './tease-testimonial.twig' %}
+         {% endfor %} 
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
+                        </div>
+        </section>
+
+        <!-- News Articles -->
+         <section class="section" id="featured-news">
+                <div class="container">
+                        <div class="row">
+                                {% for post in posts %}
+                                         {% include './partial/post-card.twig' %}
+                                {% endfor %} 
+                                </div>
+                                <div class="row mt-5 justify-content-center">
+                                         <a href="{{TimberPost('news').link}}" class="btn btn-primary btn-primary-news"> View News </a>
+                                </div>
+                        </div>
+
+        </section>
+	</article><!-- /content-wrapper -->
+{% endblock %}

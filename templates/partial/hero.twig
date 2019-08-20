@@ -1,0 +1,53 @@
+<section class="hero-section" id="hero" 
+         style="background-image:url('{{post.theheroimage ? Image(post.theheroimage).src : post.thumbnail.src}}')">
+                        <div class="container">
+                                <div class="row">
+                                <div class="col-12 hero-content d-flex">
+                                <h1 data-aos="zoom-in"
+                                    data-aos-anchor-placement="top" 
+                                    data-aos-duration="700" 
+                                    class="hero-title"> {{post.herotitle ? post.herotitle : post.title}} 
+                                </h1>
+                               {% if post.herosubtext %} 
+                                <p class="hero-subtext"
+                                   data-aos="zoom-in"
+                                   data-aos-anchor-placement="top" 
+                                   data-aos-duration="700"> 
+                                    {{post.herosubtext}}
+                                </p>
+                               {% endif %}
+                                <a data-aos="fade-up"
+                                   data-aos-anchor-placement="top" 
+                                   data-aos-delay="500" 
+                                   data-aos-duration="700" 
+                                   href="#" 
+                                   class="btn btn-primary"> Call Us 
+                                </a>
+                                </div>
+                           </div>
+                        </div>
+                         {% if fn('is_single', post.ID) %}
+                        {% if post.prev %}
+                        <div class="prev-post">
+                                <i class="fa fa-angle-left"></i>
+                                 <figure>
+				        <a href="{{post.prev.path}}" title="{{post.prev.title}}">
+                                        <img src="{{post.prev.thumbnail.src}}" class="paginate-thumbnail" alt="previous post: {{post.prev.title}}">
+                                        </a>
+				</figure>
+                                <h3> Previous {{post.prev.post_type}} </h3>
+                        </div>
+                        {% endif %}
+                        {% if post.next %}
+                        <div class="next-post">
+                                <i class="fa fa-angle-right"></i>
+                                <figure>
+				        <a href="{{post.next.path}}" title="{{post.next.title}}">
+                                        <img src="{{post.next.thumbnail.src}}" class="paginate-thumbnail" alt="next post: {{post.next.title}}">
+                                        </a>
+				</figure>
+                                <h3> Next {{post.next.post_type}} </h3>
+                        </div>
+                        {% endif %}
+                {% endif %}
+        </section>

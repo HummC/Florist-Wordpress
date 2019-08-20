@@ -1,0 +1,33 @@
+{
+  "name": "new-seasons",
+  "version": "1.0.0",
+  "description": "Case study project",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timber/starter-theme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timber/starter-theme/issues"
+  },
+  "homepage": "https://github.com/timber/starter-theme#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "lazyload": "^2.0.0-rc.2"
+  }
+}

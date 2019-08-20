@@ -1,0 +1,32 @@
+<section class="section" id="{{sID ? sID : false}}">
+                <div class="container">
+                        <div class="row">
+                                <div class="col-md-7">
+                                        <div class="text-area" 
+                                             data-aos="fade-right"
+                                             data-aos-anchor-placement="center" 
+                                             data-aos-duration="1000">
+                                        <h2 class="section-heading heading--accent"> 
+                                        {{post.sectionheading ? post.sectionheading : 'About The Seasons'}}
+                                        </h2>
+                                        <p class="section-content">
+                                        {{post.sectiontext ? post.sectiontext : "Lorem Ipsum"}}
+                                        </p>
+                                        {% if is_front %}
+                                        <a href="{{TimberPost('post-3').link}}" class="btn btn-primary"> Find our Shop </a>
+                                        {% endif %}                                        </div>
+                                </div>
+                                <div class="col-md-5">
+                                        <div class="image-area image-medium">
+                                        <img data-aos="fade-in"
+                                             data-aos-anchor-placement="center" 
+                                             data-aos-duration="1000" 
+                                             data-aos-delay="600" 
+                                             class="lazyload" 
+                                             data-src="{{Image(post.sectionimage).src}}" 
+                                             alt="image">
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </section>

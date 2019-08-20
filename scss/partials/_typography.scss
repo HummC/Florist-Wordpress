@@ -1,0 +1,41 @@
+ // Font Declarations
+ 
+ h1 {
+    font-size:$heading-large;
+    font-weight:$bold-weight;
+    font-family:$heading-family;
+}
+
+h2 {
+    font-size:$heading-regular;
+    font-weight:$bold-weight;
+    font-family:$heading-family;
+}
+
+h3 {
+    font-size:$heading-small;
+    font-weight:$bold-weight;
+    font-family:$heading-family;
+}
+
+p, li, a {
+    font-size:$paragraph-regular;
+    font-weight:$regular-weight;
+    font-family:$paragraph-family;
+}
+
+
+h2, h3, h4 {
+    margin:1.5rem 0;
+    font-family: Roboto;
+}
+
+p {
+    font-size:1rem;
+    line-height:1.7rem;
+}
+
+
+
+// Font Faces
+

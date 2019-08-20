@@ -1,0 +1,156 @@
+
+
+
+// SINGLE META BAR
+
+.article-content {
+    max-width:100%;
+    margin:0 auto;
+    text-align:justify;
+    padding: 100px 0;
+    position:relative;
+    h2, h3, h4 {
+        margin-bottom:1rem;
+        margin-top:2rem;
+        font-family: Roboto
+    }
+
+    p {
+        font-size:1rem;
+        line-height:1.6rem;
+    }
+}
+
+
+// PAGINATION BUTTONS
+
+.prev-post, .next-post {
+    position:absolute;
+    height: 200px;
+    width: 50px;
+    display: flex;
+    background: rgba(243, 243, 243, 0.37);
+    align-items: center;
+    flex-direction:column;
+    justify-content: center;
+    color: #d4d4d4;
+    font-size:1.5rem;
+    transition:0.5s ease-in-out;
+    figure {
+        width:100%;
+        opacity:0;
+        display:none;
+        img {
+            max-width:100%;
+        }
+    }
+
+    h3 {
+        display:none;
+        opacity:0;
+    }
+    &:hover {
+        cursor:pointer;
+        width:250px;
+        align-items:center;
+        background:Purple;
+        color:white;
+        justify-content:flex-start;
+        i {
+            opacity:0;
+            display:none;
+        }
+        figure {
+            display:block;
+            opacity:1;
+            height:150px;
+            overflow:hidden;
+        }
+        h3 {
+            display:block;
+            opacity:1;
+            transition:1s;
+        }
+    }
+}
+
+
+.prev-post {
+    left:0;
+    top:0;
+}
+
+.next-post {
+    right:0;
+    top:0;
+}
+
+
+// SINGLE META BAR
+
+.post-meta-bar {
+    position:absolute;
+    width:100%;
+    padding:1rem 0;
+    min-height:75px;
+    top:-80px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9;
+    background:purple;
+    box-shadow:0px 4px 10px 0px rgba(0, 0, 0, 0.4);
+    ul {
+        display:flex;
+        justify-content:space-between;
+        flex-direction:column;
+        align-items:flex-start;
+        width:300px;
+        li {
+            color: rgb(216, 216, 216);
+            background:rgba(0, 0, 0, 0.15);
+            margin:5px;
+            padding:0.5rem 1rem;
+            a {
+                text-decoration:underline;
+            }
+        }
+    }
+}
+
+.post-list-value {
+    color:White;
+    a {
+        color:white;
+    }
+}
+
+
+@media screen and (min-width: 600px) {
+
+.post-meta-bar {
+    position:absolute;
+    width:100%;
+    padding:1rem 0;
+    min-height:75px;
+    top:-50px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9;
+    background:purple;
+    ul {
+        display:flex;
+        justify-content:space-between;
+        flex-direction:row;
+        align-items:center;
+        width:80%;
+    }
+}
+
+.article-content {
+    max-width:75%;
+}
+
+
+}

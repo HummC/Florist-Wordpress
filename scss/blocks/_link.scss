@@ -1,0 +1,60 @@
+// Base styles for all buttons, dimensions, etc.
+.btn {
+    padding: 0.7rem 2rem;
+    width:fit-content;
+    outline:none;
+    display:block;
+}
+
+// Styles for primary buttons
+.btn-primary {
+    background-color: $button-bg;
+    color:white;
+    border: 0;
+    position:relative;
+}
+
+
+a.btn.btn-primary {
+    overflow: hidden;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+.btn-primary::after, .btn-primary::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-primary::after {
+    background: purple;
+    transition: 0.25s ease-in-out;
+    transition-delay: 0.15s;
+    z-index: -1;
+}
+
+.btn-primary::before {
+    background: white;
+    transition: 0.15s ease-in-out;
+    transition-delay: 0.15s;
+    z-index: -1;
+}
+
+a.btn.btn-primary:hover::before {
+    left: 0;
+}
+
+a.btn.btn-primary:hover::after {
+    left: 0;
+}
+
+a.btn.btn-primary:hover {font-weight: bold;}
+
+.category-link {
+    margin-bottom:1rem;
+    display:block;
+}

@@ -1,0 +1,10 @@
+
+<div class="grid-item col-md-4 active-link" data-aos="fade-in"
+     data-aos-anchor-placement="top" data-aos-duration="700" data-aos-delay="{{loop.index}}50">
+		<a href="{{service.link}}" title="View {{service.title}} Flowers">
+        <div class="grid-item-inner" style="background-image:url('{{service.thumbnail.src ?  service.thumbnail.src | resize(300, 300) : Image(service.theheroimage).src}}')">
+            <span class="icon icon-{{service.title | lower}}"></span>
+            <h3> {{service.title}} </h3>
+        </div>  
+		</a> 
+    </div>
